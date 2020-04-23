@@ -6,7 +6,8 @@ module.exports = {
       {
         root: ['.'],
         alias: {
-          '@core/components': './src/core/components',
+          '@core': './src/core/',
+          '@app': './src/app/',
         },
       },
     ],

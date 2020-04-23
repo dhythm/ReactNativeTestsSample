@@ -3,7 +3,7 @@ import { Button as RNButton, View } from 'react-native';
 import styled from 'styled-components';
 
 const StyledView = styled(View)`
-  background-color: ${({ palette }) => palette};
+  background-color: ${({ palette }) => palette ?? 'white'};
   border-radius: 80px;
   border-width: 1px;
   padding-top: 4px;

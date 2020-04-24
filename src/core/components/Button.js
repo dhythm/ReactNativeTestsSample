@@ -13,11 +13,16 @@ const StyledView = styled(View)`
   margin-right: 8px;
 `;
 
-const Button = ({ title, palette, onPress }) => {
+const Button = ({ testID, title, palette, onPress }) => {
   return (
     <View style={{ flexDirection: 'row' }}>
       <StyledView palette={palette}>
-        <RNButton title={title} onPress={onPress} color="#000000" />
+        <RNButton
+          testID={testID ?? 'button'}
+          title={title}
+          onPress={onPress}
+          color="#000000"
+        />
       </StyledView>
     </View>
   );

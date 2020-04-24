@@ -19,6 +19,7 @@ const SignInPage = ({ navigation }) => {
           <>
             <Wrapper>
               <Input
+                testID="input.email"
                 placeholder="email"
                 onChangeText={(text) =>
                   formikProps.setFieldValue('email', text)
@@ -30,6 +31,7 @@ const SignInPage = ({ navigation }) => {
             </Wrapper>
             <Wrapper>
               <Input
+                testID="input.password"
                 placeholder="password"
                 onChangeText={(text) =>
                   formikProps.setFieldValue('password', text)
@@ -41,7 +43,11 @@ const SignInPage = ({ navigation }) => {
               />
             </Wrapper>
 
-            <Button title="Sign in" onPress={formikProps.handleSubmit} />
+            <Button
+              testID="button.signin"
+              title="Sign in"
+              onPress={formikProps.handleSubmit}
+            />
           </>
         )}
       </Formik>

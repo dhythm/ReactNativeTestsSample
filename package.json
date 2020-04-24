@@ -36,6 +36,7 @@
     "babel-jest": "^25.4.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "detox": "^16.2.1",
     "eslint": "^6.8.0",
     "jest": "^25.4.0",
     "jest-each": "^25.4.0",
@@ -61,5 +62,18 @@
       "<rootDir>/e2e",
       "setupFramework"
     ]
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ReactNativeTestsSample.app",
+        "build": "xcodebuild -workspace ios/ReactNativeTestsSample.xcworkspace -scheme ReactNativeTestsSample -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone 11 Pro"
+        }
+      }
+    },
+    "test-runner": "jest"
   }
 }

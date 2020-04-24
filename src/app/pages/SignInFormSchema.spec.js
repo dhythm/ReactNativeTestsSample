@@ -1,7 +1,7 @@
 import each from 'jest-each';
 import { validationSchema } from './SignInFormSchema';
 
-describe('signin form schema', () => {
+describe('sign-in form schema', () => {
   const schema = validationSchema;
 
   it('should allow a user to sign in with correct values', async () => {

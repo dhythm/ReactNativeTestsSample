@@ -7,7 +7,7 @@ import { initialValues, validationSchema } from './SignInFormSchema';
 
 const SignInPage = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <View testID="signin" style={styles.container}>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

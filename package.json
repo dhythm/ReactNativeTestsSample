@@ -50,6 +50,8 @@
       "js"
     ],
     "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/assetsTransformer.js",
       "@core/components/(.*)": "<rootDir>src/core/components/$1",
       "@app/pages/(.*)": "<rootDir>src/app/pages/$1"
     },
@@ -61,6 +63,9 @@
       "<rootDir>/node_modules/",
       "<rootDir>/e2e",
       "setupFramework"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
   "detox": {

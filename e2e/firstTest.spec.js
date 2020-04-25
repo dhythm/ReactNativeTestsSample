@@ -1,4 +1,4 @@
-describe('a user', () => {
+describe('A user', () => {
   beforeEach(async () => {
     await device.reloadReactNative();
   });
@@ -7,7 +7,7 @@ describe('a user', () => {
     await expect(element(by.id('signin'))).toBeVisible();
   });
 
-  it('should be able to sign in with correct email and password', async () => {
+  it('can sign in with correct email and password', async () => {
     await expect(element(by.id('signin'))).toBeVisible();
     await element(by.id('input.email')).replaceText('test@example.com');
     await element(by.id('input.password')).replaceText('password1');

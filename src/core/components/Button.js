@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const StyledView = styled(View)`
   flex: 1;
   background-color: ${({ palette }) => palette ?? 'white'};
-  border-radius: 80px;
+  border-radius: ${({ square }) => (square ? '0px' : '80px')};
   border-width: 1px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -13,10 +13,10 @@ const StyledView = styled(View)`
   margin-right: 8px;
 `;
 
-const Button = ({ testID, title, palette, onPress }) => {
+const Button = ({ testID, title, palette, onPress, square }) => {
   return (
     <View style={{ flexDirection: 'row' }}>
-      <StyledView palette={palette}>
+      <StyledView palette={palette} square={square}>
         <RNButton
           testID={testID ?? 'button'}
           title={title}
